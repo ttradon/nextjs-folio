@@ -4,7 +4,7 @@ const todoSchema = new Schema(
     {
         content: {
             type: String,
-            require: true
+            required: true
         }
     },
     {
@@ -12,5 +12,5 @@ const todoSchema = new Schema(
     }
 )
 
-const Todo = mongoose.model.Todo || mongoose.model("Todo",todoSchema)
+const Todo = mongoose.models.Todo || mongoose.model("Todo",todoSchema)
 export default Todo
